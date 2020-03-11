@@ -1,16 +1,16 @@
 server:
-  port: 8001
+  port: 9001
 spring:
   application:
-     name: CLOUD-PROVIDER #不要使用下划线
+     name: CLOUD-CONSUMER #不要使用下划线
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7361/eureka #告诉服务提供者要把服务注册到哪儿
 instance:
     prefer-ip-address: true #显示客户端真实ip
-management:
-  context-path: /
 feign:
   hystrix:
     enabled: true
+management:
+  context-path: /
